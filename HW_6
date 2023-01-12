@@ -1,0 +1,48 @@
+from random import randint
+a=int(input('Задайте размер списка:'))
+b=int(input('Задайте начало диапозона:'))
+c=int(input('Задайте конец диапозона:'))
+while b>c:
+    print('Значение конца диапозона меньше значения начала диапозона')
+    a=int(input('Задайте размер списка:'))
+    b=int(input('Задайте начало диапозона:'))
+    c=int(input('Задайте конец диапозона:'))
+n=list()
+for i in range(1,a+1):
+    q=randint(b,c)
+    n.append(q)
+print(n)
+print(len(n))
+print(max(n))
+print(min(n))
+w=sorted(n)
+print(w)
+print(w[::-1])
+
+from random import randint
+a=int(input())
+n=list()
+for i in range(a):
+    q=randint(0,1)
+    n.append(q)
+print(n)
+print(n.count(0))
+print(n.count(1))
+s=list()
+for j in range(len(n)):
+    if n[j]==0:
+        s.append(j)
+print(s)
+
+from random import randint
+a=int(input())
+n=list()
+for i in range(a):
+    q=randint(0,9)
+    n.append(q)
+print(n)
+q=int(input())
+for j in range(len(n)-1,-1,-1):
+    if n[j] == q:
+        n.pop(j)
+print(n)
