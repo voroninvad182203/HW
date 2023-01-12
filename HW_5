@@ -1,0 +1,37 @@
+n=int(input())
+d=''
+for i in range(1,n+1):
+    c=str(input())
+    d=d+c[0]
+print(d.upper())
+
+a=str(input())
+print(len(a))
+print( a[0])
+print(a[-1])
+print(a[::-1])
+print(a[::2])
+print(a[1::2])
+
+a=input()
+if a.isdigit():
+    for i in a:
+        print(int(i)*10)
+elif 'q' in a:
+    print(a.count('q'))
+else:
+    r=0
+    for i in a:
+        if i=='!' or i=='@' or i=='№' or i=='#' or i=='$' or i=='%' or i=='&'  or i=='?' or i=='*':
+            print(r)
+        r+=1
+while True:
+    s=input('Задайте строку:')
+    if s.upper() == "STOP":
+        break
+    if s.isalpha():
+        print("Буквенная строка")
+    elif s.isdigit():
+        print("Цифровая строка")
+    elif s.isalnum():
+        print("Смешанная строка")
