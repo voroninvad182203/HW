@@ -1,0 +1,42 @@
+задача 1
+
+from math import
+print("Введите число N")
+N = int(input())
+
+file1 = open('task_1.txt', 'w')
+for i in range(N):
+num = random.randint(1000, 9999)
+file1.write(str(num) + '\n')
+file1.close()
+
+задача 2
+
+from math import
+print("Введите число a")
+a = int(input())
+print("Введите число b")
+b = int(input())
+print("Введите шаг h")
+h = int(input())
+
+file2 = open('task_2.txt', 'w')
+file2.write('x | y\n')
+for x in range(a, b, h):
+y = (x * log((1+sin(x))/x)) / (x + sin(x))
+file2.write(f"{x} {y}\n")
+file2.close()
+
+задача 3
+
+from math import
+file3 = open('task_3.txt', 'r', encoding='utf-8').read().splitlines()
+i_get = random.choice(file3)
+you_get = random.choice(file3)
+unchecked = True
+while unchecked:
+if i_get == you_get:
+you_get = random.choice(file3)
+else:
+unchecked = False
+print(f'I receive {i_get} \nYou receive {you_get}')
